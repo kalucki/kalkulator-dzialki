@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="description" content="Oblicz szacunkowy koszt odrolnienia działki rolnej w Polsce – za darmo!" />
+  <meta name="author" content="PK" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Kalkulator Odrolnienia Działki</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: auto; }
+    label { display: block; margin-top: 10px; }
+    input, select { width: 100%; padding: 8px; margin-top: 5px; }
+    button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+    .result { margin-top: 20px; font-weight: normal; }
+    .result-item { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; line-height: 1.6; }
+    .result-label { flex: 1; padding-right: 20px; }
+    .result-value { font-weight: bold; white-space: nowrap; }
+    .note { margin-top: 40px; font-size: 0.9em; color: #555; border-top: 1px solid #ccc; padding-top: 15px; }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+</head>
+<body>
+  <h1>Kalkulator Odrolnienia Działki</h1>
+  <h4>Ile kosztuje wyłączenie gruntów z produkcji rolnej</h4>
+  <label for="area">Powierzchnia działki (m²):</label>
+  <input type="number" id="area" placeholder="np. 1000">
+
+  <label for="soilClass">Klasa gleby:</label>
+  <select id="soilClass">
+    <option value="I">I</option>
+    <option value="II">II</option>
+    <option value="IIIa">IIIa</option>
+    <option value="IIIb">IIIb</option>
+    <option value="IVa">IVa</option>
+    <option value="IVb">IVb</option>
+    <option value="V">V</option>
+    <option value="VI">VI</option>
+    <option value="Ł I / Ps I">Ł I / Ps I</option>
+    <option value="Ł II / Ps II">Ł II / Ps II</option>
+    <option value="Ł III">Ł III</option>
+    <option value="Ps III">Ps III</option>
+    <option value="Ł IV">Ł IV</option>
+    <option value="Ps IV">Ps IV</option>
+    <option value="Ł V">Ł V</option>
+    <option value="Ps V">Ps V</option>
+    <option value="Ł VI">Ł VI</option>
+    <option value="Ps VI">Ps VI</option>
+  </select>
+
+  <label for="zabudowa">Rodzaj zabudowy:</label>
+  <select id="zabudowa" onchange="toggleLokaleInput()">
+    <option value="brak">Brak / Inna</option>
+    <option value="jednorodzinna">Jednorodzinna</option>
+    <option value="wielorodzinna">Wielorodzinna</option>
+  </select>
+
+  <div id="lokaleWrapper" style="display: none;">
+    <label for="lokale">Liczba lokali mieszkalnych:</label>
+    <input type="number" id="lokale" value="1" min="1">
+  </div>
+
+  <button onclick="calculateCost()">Oblicz koszt odrolnienia</button>
+
+  <div class="result" id="result"></div>
+
+  <div class="note">
+    <p><strong>Uwaga:</strong> Ten kalkulator uwzględnia aktualne stawki jednorazowej należności za trwałe wyłączenie gruntu z produkcji rolnej, zgodnie z danymi z serwisu <a target="_blank" href="https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19950160078/O/D19950078.pdf">isap.sejm.gov.pl</a>. Obliczenia uwzględniają zwolnienia przy zabudowie mieszkaniowej: do 500 m² dla budowy jednorodzinnej oraz 200 m² na każdy lokal mieszkalny w budownictwie wielorodzinnym. Kalkulator nie uwzględnia wartości rynkowej gruntu ani kosztów dokumentacji. Opłata roczna stanowi 10% należności i obowiązuje przez 10 lat. Rzeczywiste koszty mogą się różnić. Zaleca się konsultację z odpowiednim urzędem lub geodetą przed odrolnieniem.</p>
+    <p>Koszty liczone są w oparciu o aktualnie obowiązująca ustawę z dnia 3 lutego 1995 roku o ochronie gruntów rolnych i leśnych, art. 12, pkt. 7 (Dz.U.2024.82).</p>
+    <a target="_blank" href="https://www.biznes.gov.pl/pl/portal/ou283">Złóż wniosek o wyłączenie gruntów z produkcji rolniczej online na biznes.gov.pl</a>
+  </div>
+
+  <script>
+    function toggleLokaleInput() {
+      const zabudowa = document.getElementById('zabudowa').value;
+      const wrapper = document.getElementById('lokaleWrapper');
+      wrapper.style.display = zabudowa === 'wielorodzinna' ? 'block' : 'none';
+    }
+
+    function formatCurrency(value) {
+      return value.toLocaleString('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' PLN';
+    }
+
+    function calculateCost() {
+      const area = parseFloat(document.getElementById('area').value);
+      const soilClass = document.getElementById('soilClass').value;
+      const zabudowa = document.getElementById('zabudowa').value;
+      const lokale = parseInt(document.getElementById('lokale')?.value || "1");
+
+      if (isNaN(area) || area <= 0) {
+        document.getElementById('result').innerText = "Podaj prawidłową powierzchnię.";
+        return;
+      }
+
+      const rates = {
+        "I": 437175,
+        "II": 378885,
+        "IIIa": 320595,
+        "IIIb": 262305,
+        "IVa": 204015,
+        "IVb": 145725,
+        "V": 116580,
+        "VI": 87435,
+        "Ł I / Ps I": 437175,
+        "Ł II / Ps II": 361398,
+        "Ł III": 291450,
+        "Ps III": 291450,
+        "Ł IV": 174870,
+        "Ps IV": 174870,
+        "Ł V": 145725,
+        "Ps V": 116580,
+        "Ł VI": 87435,
+        "Ps VI": 87435
+      };
+
+      const ratePerHa = rates[soilClass] || 0;
+
+      let maxZwolnione = 0;
+      if (zabudowa === 'jednorodzinna') {
+        maxZwolnione = 500;
+      } else if (zabudowa === 'wielorodzinna') {
+        maxZwolnione = 200 * lokale;
+      }
+      const opodatkowanaPow = Math.max(area - maxZwolnione, 0);
+      const areaHa = opodatkowanaPow / 10000;
+
+      const jednorazowa = ratePerHa * areaHa;
+      const oplataRoczna = jednorazowa * 0.10;
+      const lacznaOplataRoczna = oplataRoczna * 10;
+      const lacznyKoszt = jednorazowa + lacznaOplataRoczna;
+
+      document.getElementById('result').innerHTML = `
+        <p><strong>Szczegóły kosztów odrolnienia:</strong></p>
+        <div class="result-item"><div class="result-label">Całkowita powierzchnia działki:</div><div class="result-value">${area} m²</div></div>
+        <div class="result-item"><div class="result-label">Zwolniona z opłat:</div><div class="result-value">${Math.min(area, maxZwolnione)} m²</div></div>
+        <div class="result-item"><div class="result-label">Opodatkowana powierzchnia:</div><div class="result-value">${opodatkowanaPow} m²</div></div>
+        <div class="result-item"><div class="result-label">Należność jednorazowa:</div><div class="result-value">${formatCurrency(jednorazowa)}</div></div>
+        <div class="result-item"><div class="result-label">Opłata roczna (10% przez 10 lat):</div><div class="result-value">${formatCurrency(oplataRoczna)}</div></div>
+        <div class="result-item"><div class="result-label">Razem całkowity koszt:</div><div class="result-value">${formatCurrency(lacznyKoszt)}</div></div>
+      `;
+    }
+  </script>
+</body>
+</html>

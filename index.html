@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWJGJZ27VG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PWJGJZ27VG');
+  </script>
   <meta charset="UTF-8"> 
   <meta name="description" content="Oblicz szacunkowy koszt odrolnienia działki rolnej w Polsce – za darmo!" />
   <meta name="author" content="PK" />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
   <title>Kalkulator Odrolnienia Działki</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: auto; }
-    label { display: block; margin-top: 10px; }
-    input, select { width: 100%; padding: 8px; margin-top: 5px; }
-    button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
-    .result { margin-top: 20px; font-weight: normal; }
-    .result-item { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; line-height: 1.6; }
-    .result-label { flex: 1; padding-right: 20px; }
-    .result-value { font-weight: bold; white-space: nowrap; }
-    .note { margin-top: 40px; font-size: 0.9em; color: #555; border-top: 1px solid #ccc; padding-top: 15px; }
-  </style>
 </head>
 <body>
   <h1>Kalkulator Odrolnienia Działki</h1>
@@ -68,6 +67,36 @@
     <p><strong>Uwaga:</strong> Ten kalkulator uwzględnia aktualne stawki jednorazowej należności za trwałe wyłączenie gruntu z produkcji rolnej, zgodnie z danymi z serwisu <a target="_blank" href="https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19950160078/O/D19950078.pdf">isap.sejm.gov.pl</a>. Obliczenia uwzględniają zwolnienia przy zabudowie mieszkaniowej: do 500 m² dla budowy jednorodzinnej oraz 200 m² na każdy lokal mieszkalny w budownictwie wielorodzinnym. Kalkulator nie uwzględnia wartości rynkowej gruntu ani kosztów dokumentacji. Opłata roczna stanowi 10% należności i obowiązuje przez 10 lat. Rzeczywiste koszty mogą się różnić. Zaleca się konsultację z odpowiednim urzędem lub geodetą przed odrolnieniem.</p>
     <p>Koszty liczone są w oparciu o aktualnie obowiązująca ustawę z dnia 3 lutego 1995 roku o ochronie gruntów rolnych i leśnych, art. 12, pkt. 7 (Dz.U.2024.82).</p>
     <a target="_blank" href="https://www.biznes.gov.pl/pl/portal/ou283">Złóż wniosek o wyłączenie gruntów z produkcji rolniczej online na biznes.gov.pl</a>
+  </div>
+
+  <div class="learn-more">
+    <h2>Dowiedz się więcej</h2>
+    <div class="learn-more-links">
+      <a href="https://blog.ongeo.pl/koszty-odrolnienia-dzialki?gad_source=1&gclid=CjwKCAjw47i_BhBTEiwAaJfPppLKP1OBi6yp9yc7cdm3v323g_6lKZHS8ePJfe2zzFGyE3unUbqb4hoCH8sQAvD_BwE" target="_blank">
+        <span>Koszty odrolnienia działki - przekształcenie działki rolnej na budowlaną</span>
+        <svg class="external-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+      <a href="https://slmadwokaci.pl/blog/jak-odrolnic-dzialke-praktyczny-przewodnik/" target="_blank">
+        <span>Jak odrolnić działkę? Praktyczny przewodnik</span>
+        <svg class="external-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+      <a href="https://obud.pl/artykul-39331/odrolnienie-pod-dom-kiedy-bedzie-darmowe.html" target="_blank">
+        <span>Odrolnienie pod dom - kiedy jest za darmo?</span>
+        <svg class="external-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+    </div>
   </div>
 
   <script>

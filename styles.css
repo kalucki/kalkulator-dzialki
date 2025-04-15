@@ -110,4 +110,145 @@ button:hover {
 
 .learn-more-links a:hover .external-link-icon {
   opacity: 1;
+}
+
+.latest-article {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.latest-article h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.article-preview {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.article-preview h3 {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.article-excerpt {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.read-more-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #45a049;
+}
+
+/* Article page styles */
+.article-nav {
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.nav-home {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-home:hover {
+  color: #4CAF50;
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.article-header {
+  margin-bottom: 3rem;
+}
+
+.article-header h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.article-meta {
+  color: #666;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.article-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.article-body h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin: 2rem 0 1rem;
+}
+
+.article-body p {
+  margin-bottom: 1.5rem;
+}
+
+.article-body ul {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+}
+
+.article-footer {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.article-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #45a049;
 } 

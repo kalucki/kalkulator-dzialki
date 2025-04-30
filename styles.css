@@ -181,7 +181,7 @@ button:hover {
 }
 
 .article-content {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -253,4 +253,55 @@ button:hover {
 
 .nav-button:hover {
   background-color: #45a049;
+}
+
+.article-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.article-summary-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #4CAF50;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.article-summary-box h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.article-summary-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-summary-box li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.article-summary-box li:last-child {
+  margin-bottom: 0;
+}
+
+.article-summary-box li:before {
+  content: "•";
+  color: #4CAF50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.article-summary-box strong {
+  color: #2c3e50;
 } 

@@ -77,34 +77,30 @@
 </div>
 
   <div class="latest-article">
-    <h2>Najnowszy artykuł</h2>
     <article class="article-preview">
-      <h3>Zmiany w prawie budowlanym 2026 - reforma planistyczna i plan ogólny</h3>
+      <h3><a href="kiedy-odrolnienie-dzialki-pod-budowe-domu-jest-bezplatne-2026.html">Kiedy odrolnienie działki pod budowę domu jest bezpłatne? Stan prawny i zasady w 2026 roku</a></h3>
+      <p class="article-excerpt">
+        Sprawdź, kiedy odrolnienie jest całkowicie bezpłatne: limit 500 m² pod dom jednorodzinny, zasady dla gruntów niższych klas oraz przypadki, w których opłaty nadal obowiązują.
+      </p>
+    </article>
+    <article class="article-preview">
+      <h3><a href="koszty-odrolnienia-dzialki-w-polsce-2026-aktualne-stawki-i-zasady.html">Koszty odrolnienia działki w Polsce w 2026 roku - aktualne stawki i zasady</a></h3>
+      <p class="article-excerpt">
+        Sprawdź aktualne stawki ustawowe za 1 ha, wzór liczenia należności, opłaty roczne oraz najważniejsze zwolnienia z opłat. Zobacz na przykładzie, kiedy koszt odrolnienia może wynieść nawet 0 zł.
+      </p>
+    </article>
+    <article class="article-preview">
+      <h3><a href="zmiany-w-prawie-budowlanym-reforma-planistyczna-plan-ogolny.html">Zmiany w prawie budowlanym 2026 - reforma planistyczna i plan ogólny</a></h3>
       <p class="article-excerpt">
         Dowiedz się o najważniejszych zmianach w prawie budowlanym w 2026 roku. Reforma planistyczna wprowadza nowe zasady zagospodarowania przestrzennego, w tym plan ogólny gminy. Sprawdź, jak te zmiany wpłyną na proces odrolnienia działek i uzyskiwania pozwoleń na budowę.
       </p>
-      <a href="zmiany-w-prawie-budowlanym-reforma-planistyczna-plan-ogolny.html" class="read-more-button">
-        Czytaj więcej
-        <svg class="external-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-          <polyline points="15 3 21 3 21 9"></polyline>
-          <line x1="10" y1="14" x2="21" y2="3"></line>
-        </svg>
-      </a>
     </article>
   </div>
 
   <div class="learn-more">
     <h2>Dowiedz się więcej</h2>
     <div class="learn-more-links">
-      <a href="https://blog.ongeo.pl/koszty-odrolnienia-dzialki?gad_source=1&gclid=CjwKCAjw47i_BhBTEiwAaJfPppLKP1OBi6yp9yc7cdm3v323g_6lKZHS8ePJfe2zzFGyE3unUbqb4hoCH8sQAvD_BwE" target="_blank">
-        <span>Koszty odrolnienia działki - przekształcenie działki rolnej na budowlaną</span>
-        <svg class="external-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-          <polyline points="15 3 21 3 21 9"></polyline>
-          <line x1="10" y1="14" x2="21" y2="3"></line>
-        </svg>
-      </a>
+    
       <a href="https://slmadwokaci.pl/blog/jak-odrolnic-dzialke-praktyczny-przewodnik/" target="_blank">
         <span>Jak odrolnić działkę? Praktyczny przewodnik</span>
         <svg class="external-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -113,14 +109,7 @@
           <line x1="10" y1="14" x2="21" y2="3"></line>
         </svg>
       </a>
-      <a href="https://obud.pl/artykul-39331/odrolnienie-pod-dom-kiedy-bedzie-darmowe.html" target="_blank">
-        <span>Odrolnienie pod dom - kiedy jest za darmo?</span>
-        <svg class="external-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-          <polyline points="15 3 21 3 21 9"></polyline>
-          <line x1="10" y1="14" x2="21" y2="3"></line>
-        </svg>
-      </a>
+      
     </div>
   </div>
 
@@ -194,6 +183,14 @@
         <div class="result-item"><div class="result-label">Razem całkowity koszt:</div><div class="result-value">${formatCurrency(lacznyKoszt)}</div></div>
       `;
     }
+  </script>
+  <footer class="site-footer">
+    <p>&copy; <span class="js-current-year"></span> <a href="/">kalkulator-dzialki.pl</a></p>
+  </footer>
+  <script>
+    document.querySelectorAll('.js-current-year').forEach((element) => {
+      element.textContent = new Date().getFullYear();
+    });
   </script>
 </body>
 </html>

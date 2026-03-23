@@ -36,6 +36,7 @@
         </div>
       </header>
       <div class="article-body">
+        <img class="article-inline-image" src="assets/img3-medium.jpeg" alt="Zmiany w prawie budowlanym 2026 - ilustracja">
         <section class="article-summary-box">
           <h2>W skrócie kluczowe zmiany od 2026 roku:</h2>
           <ul>
@@ -100,5 +101,13 @@
       <a href="/" class="nav-button">Wróć do kalkulatora odrolnienia</a>
     </div>
   </footer>
+  <footer class="site-footer">
+    <p>&copy; <span class="js-current-year"></span> <a href="/">kalkulator-dzialki.pl</a></p>
+  </footer>
+  <script>
+    document.querySelectorAll('.js-current-year').forEach((element) => {
+      element.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html> 

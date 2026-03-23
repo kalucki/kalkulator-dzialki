@@ -1,11 +1,18 @@
+:root {
+  --accent-color: #3f6f8f;
+  --accent-color-hover: #355e7a;
+}
+
 body { 
-  font-family: Arial, sans-serif; 
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
   padding: 20px; 
   max-width: 700px; 
   margin: auto; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: #1f2937;
+  line-height: 1.55;
 }
 
 label { 
@@ -13,8 +20,53 @@ label {
   margin-top: 10px; 
 }
 .kalkulator-container {
-  margin-top:40px;
+  margin-top:4px;
 }
+.subtitle-main {
+  margin: 8px 0 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #374151;
+  letter-spacing: 0.005em;
+}
+
+.home-hero {
+  margin-top: 6px;
+  margin-bottom: 14px;
+  min-height: 230px;
+  padding: 28px 24px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)),
+    url("assets/im6Medium.jpeg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.home-hero h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: #0f172a;
+  text-wrap: balance;
+}
+
+.hero-kicker {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #334155;
+}
+
 input, select { 
   width: 100%; 
   padding: 8px; 
@@ -29,7 +81,7 @@ button {
   padding: 10px 20px; 
   font-size: 16px;
   width: 100%;
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: white;
   border: none;
   border-radius: 4px;
@@ -37,7 +89,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: var(--accent-color-hover);
 }
 
 .result { 
@@ -65,51 +117,26 @@ button:hover {
 
 .result-divider {
   margin: 4px 0 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid #f2f1f1;
 }
 
 .note { 
   margin-top: 40px; 
   font-size: 0.9em; 
   color: #555; 
-  border-top: 1px solid #ccc; 
+  border-top: 1px solid #f2f1f1; 
   padding-top: 15px; 
 }
 
-.learn-more {
-  margin-top: 40px;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  border-top: 1px solid #ccc;
+.external-link {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-.learn-more h2 {
-  margin-bottom: 20px;
-  color: #333;
+.external-link:hover {
+  color: var(--accent-color-hover);
 }
-
-.learn-more-links {
-  display: grid;
-  gap: 15px;
-}
-
-.learn-more-links a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  color: #333;
-  text-decoration: none;
-  transition: background-color 0.2s;
-  gap: 10px;
-}
-
-.learn-more-links a:hover {
-  background-color: #e0e0e0;
-}
-
 .external-link-icon {
   width: 20px;
   height: 20px;
@@ -121,6 +148,47 @@ button:hover {
 
 .learn-more-links a:hover .external-link-icon {
   opacity: 1;
+}
+
+.faq-section {
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid #f2f1f1;
+}
+
+.faq-section h3 {
+  margin: 0 0 1rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.faq-item {
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.75rem;
+  background-color: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+}
+
+.faq-item h4 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.55;
+}
+
+.faq-item a {
+  color: var(--accent-color);
+}
+
+.faq-item a:hover {
+  color: var(--accent-color-hover);
 }
 
 .latest-article {
@@ -164,7 +232,7 @@ button:hover {
 .article-nav {
   padding: 1rem 2rem;
   background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #f2f1f1;
 }
 
 .nav-home {
@@ -175,7 +243,7 @@ button:hover {
 }
 
 .nav-home:hover {
-  color: #4CAF50;
+  color: var(--accent-color);
 }
 
 .article-content {
@@ -239,7 +307,7 @@ button:hover {
   max-width: 800px;
   margin: 3rem auto;
   padding: 2rem;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid #f2f1f1;
 }
 
 .article-navigation {
@@ -250,7 +318,7 @@ button:hover {
 .nav-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -258,7 +326,7 @@ button:hover {
 }
 
 .nav-button:hover {
-  background-color: #45a049;
+  background-color: var(--accent-color-hover);
 }
 
 .article-body {
@@ -269,7 +337,7 @@ button:hover {
 
 .article-summary-box {
   background-color: #f8f9fa;
-  border-left: 4px solid #4CAF50;
+  border-left: 4px solid var(--accent-color);
   padding: 1.5rem;
   margin: 2rem 0;
   border-radius: 0 8px 8px 0;
@@ -302,7 +370,7 @@ button:hover {
 
 .article-summary-box li:before {
   content: "•";
-  color: #4CAF50;
+  color: var(--accent-color);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -312,10 +380,39 @@ button:hover {
   color: #2c3e50;
 } 
 
+.article-sources {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f2f1f1;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.article-sources h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.article-sources p {
+  margin: 0;
+}
+
+.article-sources a {
+  color: #4b5563;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-sources a:hover {
+  color: #1f2937;
+}
+
 .site-footer {
   margin-top: auto;
   padding-top: 1rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #f2f1f1;
   text-align: center;
   color: #666;
   font-size: 0.95rem;

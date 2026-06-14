@@ -14,21 +14,99 @@
   </script>
   <meta charset="UTF-8"> 
   <meta name="google-adsense-account" content="ca-pub-3609029319778679">
-  <meta name="description" content="Oblicz szacunkowy koszt odrolnienia działki rolnej w Polsce – za darmo! Kalkulator przekształcenia działki rolnej w budowlaną, poznaj koszta." />
+  <meta name="description" content="Sprawdź koszt odrolnienia działki w 2026: od 0 zł (klasa V-VI, do 500 m²) do 437 tys. zł/ha (klasa I). Kalkulator uwzględnia klasę gleby, powierzchnię i zwolnienia ustawowe. Wynik w 30 sekund." />
   <meta name="author" content="PK" />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
-  <title>Kalkulator Kosztów Odrolnienia Działki</title>
+  <title>Ile kosztuje odrolnienie działki w 2026? Kalkulator [darmowy]</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ile kosztuje odrolnienie działki 1000 m² w 2026 roku?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Koszt zależy od klasy gleby. Dla działki 1000 m² pod dom jednorodzinny: klasa V-VI gleby mineralnej – 0 zł (zwolnienie), klasa IIIb – ok. 13 115 zł należności jednorazowej, klasa I – ok. 21 859 zł. Pierwsze 500 m² jest zawsze zwolnione."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy działka klasy IV, V lub VI wymaga opłaty za odrolnienie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gleby mineralne klas IV-VI są zwolnione z opłaty na mocy art. 12 ust. 7 ustawy z 1995 r. Gleby organiczne tych klas nadal podlegają opłacie według stawek 87 435 zł/ha (klasa VI) do 204 015 zł/ha (klasa IVa)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ile trwa odrolnienie działki?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Procedura wyłączenia gruntu z produkcji rolnej trwa zazwyczaj 2-3 miesiące. Składa się z czterech etapów: zebranie dokumentów, złożenie wniosku do starostwa, postępowanie administracyjne i wydanie decyzji."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy da się odrolnić działkę za darmo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak, w kilku przypadkach: gleby mineralne klas IV-VI, pierwsze 500 m² pod dom jednorodzinny, 200 m² na każdy lokal w zabudowie wielorodzinnej, inwestycje celu publicznego oraz zabudowa zagrodowa w gospodarstwie rolnym."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czym różni się odrolnienie od przekształcenia działki?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Przekształcenie działki to etap planistyczny – zmiana przeznaczenia gruntu w MPZP lub decyzja o warunkach zabudowy (decyzja gminy). Odrolnienie to etap administracyjny – wyłączenie z produkcji rolnej (decyzja starosty, wiąże się z opłatami)."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Kalkulator odrolnienia działki",
+  "description": "Darmowy kalkulator obliczający koszt odrolnienia działki w Polsce w 2026 roku. Uwzględnia klasę gleby, powierzchnię i zwolnienia ustawowe.",
+  "url": "https://kalkulator-dzialki.pl/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (web-based)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PLN"
+  },
+  "inLanguage": "pl-PL"
+}
+  </script>
 </head>
 <body>
   <header class="home-hero">
-    <h1>Kalkulator Kosztów Odrolnienia Działki</h1>
-    <h3 class="subtitle-main">Sprawdź ile kosztuje wyłączenie gruntów z produkcji rolnej w 2026 roku</h3>
+    <div class="hero-inner">
+      <h1>Kalkulator <span class="hero-highlight">odrolnienia działki</span></h1>
+      <p class="hero-lead">Sprawdź koszt wyłączenia gruntu z produkcji rolnej w 30 sekund – uwzględnia klasę gleby, powierzchnię i zwolnienia ustawowe.</p>
+      <ul class="hero-highlights" aria-label="Najważniejsze informacje">
+        <li>
+          <img src="assets/icons/plant-2.svg" alt="" width="16" height="16" aria-hidden="true">
+          Klasy gleby
+        </li>
+        <li>
+          <img src="assets/icons/currency-zloty.svg" alt="" width="16" height="16" aria-hidden="true">
+          Stawki ustawowe 2026
+        </li>
+      </ul>
+    </div>
   </header>
   <div class="kalkulator-container">
 
+  <section id="kalkulator" class="calculator-section" aria-label="Kalkulator odrolnienia">
   <label for="area">Powierzchnia działki (m²):</label>
   <input type="number" id="area" placeholder="np. 1000">
 
@@ -66,18 +144,273 @@
     <input type="number" id="lokale" value="1" min="1">
   </div>
 
-  <button onclick="calculateCost()">Oblicz koszt odrolnienia</button>
+  <button onclick="calculateCost()">
+    <img src="assets/icons/calculator.svg" alt="" class="icon icon--on-dark" width="20" height="20" aria-hidden="true">
+    Oblicz koszt odrolnienia
+  </button>
 
   <div class="result" id="result"></div>
+  </section>
 
-  <div class="note">
-    <p><strong>Uwaga:</strong> Ten kalkulator uwzględnia aktualne stawki jednorazowej należności za trwałe wyłączenie gruntu z produkcji rolnej, zgodnie z danymi z serwisu <a class="external-link" target="_blank" href="https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19950160078/O/D19950078.pdf">isap.sejm.gov.pl</a>. Obliczenia uwzględniają zwolnienia przy zabudowie mieszkaniowej: do 500 m² dla budowy jednorodzinnej oraz 200 m² na każdy lokal mieszkalny w budownictwie wielorodzinnym. Kalkulator nie uwzględnia wartości rynkowej gruntu ani kosztów dokumentacji. Opłata roczna stanowi 10% należności i obowiązuje przez 10 lat. Rzeczywiste koszty mogą się różnić. Zaleca się konsultację z odpowiednim urzędem lub geodetą przed odrolnieniem.</p>
-    <p>Koszty liczone są w oparciu o aktualnie obowiązująca ustawę z dnia 3 lutego 1995 roku o ochronie gruntów rolnych i leśnych, art. 12, pkt. 7 (Dz.U.2024.82).</p>
-    <a class="external-link" target="_blank" href="https://www.biznes.gov.pl/pl/portal/ou283">Złóż wniosek o wyłączenie gruntów z produkcji rolniczej online na biznes.gov.pl</a>
+  <nav class="page-toc" aria-label="Spis treści">
+    <div class="page-toc-header">
+      <img src="assets/icons/list-details.svg" alt="" class="icon icon--accent" width="22" height="22" aria-hidden="true">
+      <p class="page-toc-title">Na tej stronie</p>
+    </div>
+    <ul class="page-toc-grid">
+      <li>
+        <a href="#kalkulator" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/calculator.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">Kalkulator</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+      <li>
+        <a href="#koszt" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/currency-zloty.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">Koszt odrolnienia 2026</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+      <li>
+        <a href="#stawki" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/table.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">Tabela stawek</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+      <li>
+        <a href="#przyklady" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/list-numbers.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">Przykłady wyliczeń</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+      <li>
+        <a href="#odrolnienie-vs-przeksztalcenie" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/arrows-exchange.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">Odrolnienie vs przekształcenie</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+      <li>
+        <a href="#klasy-gleby" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/plant-2.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">Klasy gleby</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+      <li>
+        <a href="#zwolnienia" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/rosette-discount-check.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">Zwolnienia ustawowe</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+      <li>
+        <a href="#artykuly" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/news.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">Artykuły</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+      <li>
+        <a href="#faq" class="page-toc-link">
+          <span class="page-toc-icon"><img src="assets/icons/help.svg" alt="" width="18" height="18" aria-hidden="true"></span>
+          <span class="page-toc-label">FAQ</span>
+          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="content-sections">
+    <section id="koszt">
+      <h2>Ile kosztuje odrolnienie działki w 2026 roku?</h2>
+
+      <p>Koszt odrolnienia działki w 2026 roku zależy przede wszystkim od <strong>klasy bonitacyjnej gleby</strong> i <strong>powierzchni wyłączenia</strong>. Stawki ustawowe wahają się od <strong>0 zł</strong> (klasy V-VI gleb mineralnych oraz pierwsze 500 m² pod dom jednorodzinny) do <strong>437 175 zł za hektar</strong> dla najlepszych gruntów klasy I.</p>
+
+      <p>Na całkowity koszt odrolnienia składają się dwa elementy:</p>
+
+      <ul>
+        <li><strong>Należność jednorazowa</strong> – płatna po wydaniu decyzji o wyłączeniu gruntu z produkcji rolnej, pomniejszana o wartość rynkową działki</li>
+        <li><strong>Opłata roczna</strong> – stanowi 10% należności jednorazowej i obowiązuje przez 10 lat</li>
+      </ul>
+
+      <p>Kalkulator powyżej oblicza obie kwoty automatycznie po wybraniu klasy gleby i podaniu powierzchni działki. W większości przypadków – szczególnie przy działkach klasy IV-VI lub o powierzchni do 500 m² pod budownictwo jednorodzinne – <strong>realny koszt odrolnienia wynosi 0 zł</strong>.</p>
+    </section>
+
+    <section id="stawki">
+      <h2>Tabela stawek odrolnienia 2026 – ile za hektar?</h2>
+
+      <p>Stawki za wyłączenie 1 hektara gruntu z produkcji rolnej, zgodnie z ustawą z dnia 3 lutego 1995 r. o ochronie gruntów rolnych i leśnych (Dz.U.2024.82, art. 12 ust. 7):</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Klasa gleby</th>
+              <th>Stawka za 1 ha</th>
+              <th>Stawka za 1 m²</th>
+              <th>Uwagi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Klasa I</td>
+              <td>437 175 zł</td>
+              <td>43,72 zł</td>
+              <td>Wymagana zgoda Ministra Rolnictwa</td>
+            </tr>
+            <tr>
+              <td>Klasa II</td>
+              <td>378 885 zł</td>
+              <td>37,89 zł</td>
+              <td>Wymagana zgoda Ministra Rolnictwa</td>
+            </tr>
+            <tr>
+              <td>Klasa IIIa</td>
+              <td>320 595 zł</td>
+              <td>32,06 zł</td>
+              <td>Wymagana zgoda Ministra Rolnictwa</td>
+            </tr>
+            <tr>
+              <td>Klasa IIIb</td>
+              <td>262 305 zł</td>
+              <td>26,23 zł</td>
+              <td>Wymagana zgoda Ministra Rolnictwa</td>
+            </tr>
+            <tr>
+              <td>Klasa IVa</td>
+              <td>204 015 zł</td>
+              <td>20,40 zł</td>
+              <td>Tylko gleby organiczne (mineralne zwolnione)</td>
+            </tr>
+            <tr>
+              <td>Klasa IVb</td>
+              <td>145 725 zł</td>
+              <td>14,57 zł</td>
+              <td>Tylko gleby organiczne (mineralne zwolnione)</td>
+            </tr>
+            <tr>
+              <td>Klasa V</td>
+              <td>116 580 zł</td>
+              <td>11,66 zł</td>
+              <td>Tylko gleby organiczne (mineralne zwolnione)</td>
+            </tr>
+            <tr>
+              <td>Klasa VI</td>
+              <td>87 435 zł</td>
+              <td>8,74 zł</td>
+              <td>Tylko gleby organiczne (mineralne zwolnione)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="przyklady">
+      <h2>Przykładowe wyliczenia kosztu odrolnienia</h2>
+
+      <p>Aby pokazać jak różnice w klasie gleby i powierzchni wpływają na koszt, przygotowaliśmy konkretne przykłady. Wszystkie kwoty są wstępne – nie uwzględniają pomniejszenia o wartość rynkową gruntu.</p>
+
+      <div class="expandable-list">
+        <details class="expandable-item">
+          <summary>Przykład 1: 1000 m², klasa IIIb, dom jednorodzinny</summary>
+          <ul>
+            <li>Powierzchnia opłaty: 1000 m² – 500 m² (zwolnienie) = <strong>500 m²</strong></li>
+            <li>Stawka klasy IIIb: 26,23 zł/m²</li>
+            <li><strong>Należność jednorazowa: ~13 115 zł</strong></li>
+            <li>Opłata roczna: ~1 311 zł × 10 lat = 13 110 zł</li>
+            <li><strong>Łączny koszt 10-letni: ~26 225 zł</strong></li>
+          </ul>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Przykład 2: 1000 m², klasa V mineralna, dom jednorodzinny</summary>
+          <ul>
+            <li>Klasa V gleb mineralnych – <strong>zwolnienie z opłaty</strong></li>
+            <li><strong>Łączny koszt: 0 zł</strong></li>
+          </ul>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Przykład 3: 3000 m², klasa IIIa, dom jednorodzinny</summary>
+          <ul>
+            <li>Powierzchnia opłaty: 3000 m² – 500 m² = <strong>2500 m²</strong></li>
+            <li>Stawka klasy IIIa: 32,06 zł/m²</li>
+            <li><strong>Należność jednorazowa: ~80 150 zł</strong></li>
+            <li>Opłata roczna: ~8 015 zł × 10 lat = 80 150 zł</li>
+            <li><strong>Łączny koszt 10-letni: ~160 300 zł</strong> (przed pomniejszeniem o wartość rynkową)</li>
+          </ul>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Przykład 4: 500 m², dowolna klasa, dom jednorodzinny</summary>
+          <ul>
+            <li>Powierzchnia w całości objęta zwolnieniem ustawowym</li>
+            <li><strong>Łączny koszt: 0 zł</strong></li>
+          </ul>
+        </details>
+      </div>
+
+      <p class="section-footnote">Aby uzyskać precyzyjne wyliczenie dla swojej działki, skorzystaj z <a href="#kalkulator">kalkulatora powyżej</a>.</p>
+    </section>
+
+    <section id="odrolnienie-vs-przeksztalcenie">
+      <h2>Odrolnienie a przekształcenie działki – czy to to samo?</h2>
+
+      <p>W obiegowej mowie pojęcia "odrolnienie działki" i "przekształcenie działki rolnej na budowlaną" są używane zamiennie. <strong>Z prawnego punktu widzenia to jednak dwa różne, choć powiązane procesy:</strong></p>
+
+      <ul>
+        <li><strong>Przekształcenie działki rolnej na budowlaną</strong> – to etap planistyczny. Polega na zmianie przeznaczenia gruntu w miejscowym planie zagospodarowania przestrzennego (MPZP) lub uzyskaniu decyzji o warunkach zabudowy (WZ). Decyzję wydaje gmina.</li>
+        <li><strong>Odrolnienie działki (wyłączenie z produkcji rolnej)</strong> – to etap administracyjny dotyczący samego gruntu. Wymaga decyzji starosty i wiąże się z opłatami obliczanymi przez kalkulator powyżej.</li>
+      </ul>
+
+      <p>W praktyce, aby zbudować dom na działce rolnej, najczęściej trzeba przejść <strong>oba procesy</strong>: najpierw zmienić przeznaczenie w planie miejscowym (lub uzyskać WZ), a następnie uzyskać decyzję starosty o wyłączeniu gruntu z produkcji rolnej. Wyjątki dotyczą gruntów już objętych MPZP o przeznaczeniu budowlanym oraz działek w granicach miast (art. 10a ustawy).</p>
+
+      <p>Koszt odrolnienia, który oblicza nasz kalkulator, dotyczy <strong>drugiego etapu</strong> – opłaty za wyłączenie z produkcji rolnej. Koszty etapu planistycznego (wniosek o WZ, ewentualne opracowania urbanistyczne) są zwykle znacznie niższe i zależą od gminy.</p>
+    </section>
+
+    <section id="klasy-gleby">
+      <h2>Klasy gleby a koszt odrolnienia – jak to działa?</h2>
+
+      <p>Klasy bonitacyjne gleby są ustalane przez Instytut Uprawy, Nawożenia i Gleboznawstwa (IUNG) i opisują jakość gruntu rolnego w skali I-VI (gdzie I to gleby najlepsze, VI najsłabsze). <strong>Klasa gleby twojej działki jest wpisana w Ewidencji Gruntów i Budynków (EGiB)</strong> – sprawdzisz ją w urzędzie gminy, online w geoportalu lub w wypisie z rejestru gruntów.</p>
+
+      <p>Z punktu widzenia odrolnienia kluczowe są dwie zasady:</p>
+
+      <ol>
+        <li><strong>Klasy I-III</strong> – opłata zawsze wymagana, dodatkowo potrzebna jest zgoda Ministra Rolnictwa i Rozwoju Wsi (chyba że działka leży w granicach miast i jest objęta MPZP – art. 10a ustawy).</li>
+        <li><strong>Klasy IV-VI</strong> – opłata wymagana tylko dla gleb organicznych. <strong>Gleby mineralne klas IV-VI są zwolnione z opłaty</strong> (art. 12 ust. 7 ustawy).</li>
+      </ol>
+
+      <p>Oznaczenie "mineralna" lub "organiczna" znajdziesz w EGiB obok klasy bonitacyjnej – dla gleb organicznych jest to symbol "M", "Mw" lub podobny przy konturze klasyfikacyjnym.</p>
+    </section>
+
+    <section id="zwolnienia">
+      <h2>Kto może odrolnić działkę za darmo? Zwolnienia ustawowe</h2>
+
+      <p>Ustawa o ochronie gruntów rolnych i leśnych przewiduje kilka sytuacji, w których odrolnienie działki jest <strong>bezpłatne</strong>:</p>
+
+      <ul>
+        <li><strong>Powierzchnia do 500 m² pod dom jednorodzinny</strong> – pierwsze 500 m² wyłączenia jest zawsze zwolnione z opłaty, niezależnie od klasy gleby</li>
+        <li><strong>200 m² na każdy lokal mieszkalny w zabudowie wielorodzinnej</strong> – analogiczne zwolnienie dla bloków i budynków wielorodzinnych</li>
+        <li><strong>Gleby mineralne klas IV-VI</strong> – pełne zwolnienie (gleby organiczne nadal płacą)</li>
+        <li><strong>Działki położone w granicach administracyjnych miast</strong> – nie wymagają zgody Ministra Rolnictwa, ale opłata za samo wyłączenie nadal może obowiązywać</li>
+        <li><strong>Inwestycje celu publicznego</strong> – drogi publiczne, koleje, sieci przesyłowe</li>
+        <li><strong>Zabudowa zagrodowa w gospodarstwie rolnym</strong> – do określonej powierzchni</li>
+      </ul>
+
+      <p>Aby sprawdzić, czy twoja konkretna sytuacja kwalifikuje się do zwolnienia, skorzystaj z kalkulatora powyżej (uwzględnia limit 500 m²) lub przeczytaj artykuł <a href="https://kalkulator-dzialki.pl/kiedy-odrolnienie-dzialki-pod-budowe-domu-jest-bezplatne-2026.html">kiedy odrolnienie działki pod budowę domu jest bezpłatne w 2026 roku</a>.</p>
+    </section>
   </div>
 </div>
 
-  <div class="latest-article">
+  <div id="artykuly" class="latest-article">
+    <h2 class="section-heading section-heading--with-icon">
+      <img src="assets/icons/news.svg" alt="" class="icon icon--accent" width="24" height="24" aria-hidden="true">
+      Powiązane artykuły
+    </h2>
     <article class="article-preview">
       <h3><a href="kiedy-odrolnienie-dzialki-pod-budowe-domu-jest-bezplatne-2026.html">Kiedy odrolnienie działki pod budowę domu jest bezpłatne? Stan prawny i zasady w 2026 roku</a></h3>
       <p class="article-excerpt">
@@ -99,21 +432,81 @@
   </div>
 
 
-    <div class="faq-section">
-      <h3>Najczęściej zadawane pytania</h3>
-      <div class="faq-item">
-        <h4>Jakich informacji potrzebuję, aby obliczyć koszt odrolnienia działki?</h4>
-        <p>W kalkulatorze podaj: powierzchnię działki (m²), klasę gleby oraz rodzaj zabudowy. Jeśli wybierzesz zabudowę wielorodzinną, potrzebna jest też liczba lokali.</p>
+    <section id="faq" class="faq-section">
+      <h2 class="section-heading section-heading--with-icon">
+        <img src="assets/icons/help.svg" alt="" class="icon icon--accent" width="24" height="24" aria-hidden="true">
+        Najczęściej zadawane pytania
+      </h2>
+
+      <div class="expandable-list">
+        <details class="expandable-item">
+          <summary>Jakich informacji potrzebuję, aby obliczyć koszt odrolnienia?</summary>
+          <p>W kalkulatorze podaj trzy informacje: <strong>powierzchnię działki w m²</strong>, <strong>klasę gleby</strong> (sprawdzisz w Ewidencji Gruntów lub geoportalu) oraz <strong>rodzaj zabudowy</strong> (jednorodzinna, wielorodzinna lub inna). Jeśli wybierzesz zabudowę wielorodzinną, potrzebna jest też liczba lokali mieszkalnych.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Ile kosztuje odrolnienie działki 1000 m² w 2026 roku?</summary>
+          <p>Koszt zależy od klasy gleby. Dla działki 1000 m² pod dom jednorodzinny: <strong>klasa V-VI gleby mineralnej – 0 zł</strong> (zwolnienie), klasa IIIb – ok. 13 115 zł należności jednorazowej, klasa I – ok. 21 859 zł. Pamiętaj, że pierwsze 500 m² jest zawsze zwolnione, a od należności odejmuje się wartość rynkową działki.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czy odrolnienie działki klasy III jest drogie?</summary>
+          <p>Dla klasy IIIa stawka ustawowa wynosi <strong>320 595 zł/ha (32,06 zł/m²)</strong>, dla IIIb – 262 305 zł/ha (26,23 zł/m²). Po pomniejszeniu o wartość rynkową gruntu w atrakcyjnych lokalizacjach realny koszt może być znacznie niższy lub nawet zerowy. Dla budowy domu jednorodzinnego pierwsze 500 m² jest zwolnione.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czy działka klasy IV, V lub VI wymaga opłaty za odrolnienie?</summary>
+          <p>Zależy od pochodzenia gleby. <strong>Gleby mineralne klas IV-VI są zwolnione z opłaty</strong> na mocy art. 12 ust. 7 ustawy z 1995 r. Gleby organiczne tych klas nadal podlegają opłacie według stawek 87 435 zł/ha (klasa VI) do 204 015 zł/ha (klasa IVa). Pochodzenie gleby (mineralna/organiczna) sprawdzisz w EGiB.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Ile trwa odrolnienie działki?</summary>
+          <p>Procedura wyłączenia gruntu z produkcji rolnej trwa zazwyczaj <strong>2-3 miesiące</strong>. Składa się z czterech etapów: zebranie dokumentów (wypis z EGiB, mapa, dokumenty własności), złożenie wniosku do starostwa, postępowanie administracyjne (do 30 dni, w sprawach skomplikowanych do 2 miesięcy) oraz wydanie decyzji. Jeśli grunt wymaga wcześniej zmiany przeznaczenia w MPZP, procedura może wydłużyć się o kolejne 6-12 miesięcy.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czy da się odrolnić działkę za darmo?</summary>
+          <p>Tak, w kilku przypadkach: gleby mineralne klas IV-VI (pełne zwolnienie), pierwsze 500 m² pod dom jednorodzinny (zawsze zwolnione), 200 m² na każdy lokal w zabudowie wielorodzinnej, inwestycje celu publicznego oraz zabudowa zagrodowa w gospodarstwie. Szczegóły w artykule <a href="https://kalkulator-dzialki.pl/kiedy-odrolnienie-dzialki-pod-budowe-domu-jest-bezplatne-2026.html">kiedy odrolnienie może być bezpłatne</a>.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czy od odrolnienia działki trzeba zapłacić podatek?</summary>
+          <p>Opłata za wyłączenie z produkcji rolnej (należność jednorazowa + opłata roczna 10% przez 10 lat) <strong>nie jest podatkiem</strong>, lecz daniną o charakterze administracyjnym. Po odrolnieniu zmienia się jednak status działki, co wpływa na <strong>podatek od nieruchomości</strong> – stawka dla gruntów budowlanych jest znacznie wyższa niż dla rolnych. Konkretne stawki ustala rada gminy.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czy mogę odrolnić tylko część działki?</summary>
+          <p>Tak, wyłączenie z produkcji rolnej można przeprowadzić dla wybranej części działki – np. tej, na której planujesz budowę. Pozostała część zachowuje status gruntu rolnego. W praktyce większość inwestorów odrolnia tyle, ile faktycznie zajmie budynek + niezbędne otoczenie (zwykle 500-1000 m²), aby skorzystać ze zwolnienia ustawowego.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czy odrolnienie wymaga zgody Ministra Rolnictwa?</summary>
+          <p>Zgoda Ministra Rolnictwa i Rozwoju Wsi jest wymagana dla <strong>gruntów klas I-III</strong> (najlepsze gleby). Dla klas IV-VI zgody nie potrzeba. Wyjątek: działki położone w granicach administracyjnych miast i objęte miejscowym planem zagospodarowania przestrzennego nie wymagają zgody Ministra, niezależnie od klasy gleby (art. 10a ustawy).</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czym różni się odrolnienie od przekształcenia działki?</summary>
+          <p>Przekształcenie działki to <strong>etap planistyczny</strong> – zmiana przeznaczenia gruntu w MPZP lub uzyskanie decyzji o warunkach zabudowy (decyzja gminy). Odrolnienie to <strong>etap administracyjny</strong> – wyłączenie konkretnego gruntu z produkcji rolnej (decyzja starosty, wiąże się z opłatami). Aby zbudować dom na działce rolnej, najczęściej trzeba przejść oba procesy.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czy w 2026 roku zmieniają się przepisy o odrolnieniu?</summary>
+          <p>Stawki ustawowe za wyłączenie gruntu z produkcji rolnej (art. 12 ust. 7) pozostają bez zmian od 2022 r. Zmienia się natomiast otoczenie planistyczne: <strong>reforma planistyczna z 2023 r.</strong> wprowadza od 2026 r. plan ogólny gminy, który zastąpi obecne studia uwarunkowań. Może to wpłynąć na procedurę przekształcania gruntów. Szczegóły w artykule <a href="https://kalkulator-dzialki.pl/zmiany-w-prawie-budowlanym-reforma-planistyczna-plan-ogolny.html">zmiany w prawie budowlanym 2026</a>.</p>
+        </details>
       </div>
-      <div class="faq-item">
-        <h4>Czy odrolnienie działki jest drogie?</h4>
-        <p>To zależy od klasy gruntu, powierzchni objętej wyłączeniem i zwolnień ustawowych. Przykłady i stawki znajdziesz w artykule <a class="external-link" href="koszty-odrolnienia-dzialki-w-polsce-2026-aktualne-stawki-i-zasady.html">Koszty odrolnienia działki w Polsce</a>.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Czy da się odrolnić działkę za darmo?</h4>
-        <p>Tak, w części przypadków jest to możliwe (np. limity ustawowe lub określone rodzaje gruntów). Szczegóły opisaliśmy w artykule <a class="external-link" href="kiedy-odrolnienie-dzialki-pod-budowe-domu-jest-bezplatne-2026.html">kiedy odrolnienie może być bezpłatne</a>.</p>
-      </div>
+    </section>
+
+  <div class="note">
+    <div class="note-header">
+      <img src="assets/icons/info-circle.svg" alt="" class="icon icon--muted" width="20" height="20" aria-hidden="true">
+      <strong>Uwaga</strong>
     </div>
+    <p>Ten kalkulator uwzględnia aktualne stawki jednorazowej należności za trwałe wyłączenie gruntu z produkcji rolnej, zgodnie z danymi z serwisu <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19950160078/O/D19950078.pdf">isap.sejm.gov.pl<img src="assets/icons/external-link.svg" alt="" class="icon icon--inline" width="14" height="14" aria-hidden="true"></a>. Obliczenia uwzględniają zwolnienia przy zabudowie mieszkaniowej: do 500 m² dla budowy jednorodzinnej oraz 200 m² na każdy lokal mieszkalny w budownictwie wielorodzinnym. Kalkulator nie uwzględnia wartości rynkowej gruntu ani kosztów dokumentacji. Opłata roczna stanowi 10% należności i obowiązuje przez 10 lat. Rzeczywiste koszty mogą się różnić. Zaleca się konsultację z odpowiednim urzędem lub geodetą przed odrolnieniem.</p>
+    <p>Koszty liczone są w oparciu o aktualnie obowiązująca ustawę z dnia 3 lutego 1995 roku o ochronie gruntów rolnych i leśnych, art. 12, pkt. 7 (Dz.U.2024.82).</p>
+    <a class="external-link external-link--standalone" target="_blank" rel="noopener noreferrer" href="https://www.biznes.gov.pl/pl/portal/ou283">
+      Złóż wniosek o wyłączenie gruntów z produkcji rolniczej online na biznes.gov.pl
+      <img src="assets/icons/external-link.svg" alt="" class="icon icon--inline" width="14" height="14" aria-hidden="true">
+    </a>
   </div>
 
   <script>

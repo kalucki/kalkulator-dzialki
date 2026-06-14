@@ -406,6 +406,11 @@
   </div>
 </div>
 
+  <section id="lesna-dzialka" class="cross-link-box">
+    <h2>Masz działkę leśną zamiast rolnej?</h2>
+    <p>Jeśli twój grunt jest oznaczony w ewidencji jako las (Ls), opłata za jego wyłączenie liczy się inaczej — według ceny 1 m³ drewna i typu siedliskowego lasu. Skorzystaj z <a href="kalkulator-wylaczenia-z-produkcji-lesnej.html">kalkulatora wyłączenia z produkcji leśnej</a>, który uwzględnia te specyficzne zasady.</p>
+  </section>
+
   <div id="artykuly" class="latest-article">
     <h2 class="section-heading section-heading--with-icon">
       <img src="assets/icons/news.svg" alt="" class="icon icon--accent" width="24" height="24" aria-hidden="true">
@@ -487,6 +492,11 @@
         <details class="expandable-item">
           <summary>Czym różni się odrolnienie od przekształcenia działki?</summary>
           <p>Przekształcenie działki to <strong>etap planistyczny</strong> – zmiana przeznaczenia gruntu w MPZP lub uzyskanie decyzji o warunkach zabudowy (decyzja gminy). Odrolnienie to <strong>etap administracyjny</strong> – wyłączenie konkretnego gruntu z produkcji rolnej (decyzja starosty, wiąże się z opłatami). Aby zbudować dom na działce rolnej, najczęściej trzeba przejść oba procesy.</p>
+        </details>
+
+        <details class="expandable-item">
+          <summary>Czy ten kalkulator działa dla działek leśnych?</summary>
+          <p>Nie — ten kalkulator dotyczy wyłącznie wyłączenia gruntów z produkcji rolnej. Dla działek leśnych obowiązują inne zasady (opłata liczona według typu siedliskowego lasu i ceny drewna wg GUS) — skorzystaj z naszego <a href="kalkulator-wylaczenia-z-produkcji-lesnej.html">kalkulatora wyłączenia z produkcji leśnej</a>.</p>
         </details>
 
         <details class="expandable-item">
@@ -574,14 +584,24 @@
         <div class="result-item"><div class="result-label">Zwolniona z opłat:</div><div class="result-value">${Math.min(area, maxZwolnione)} m²</div></div>
         <div class="result-item"><div class="result-label">Opodatkowana powierzchnia:</div><div class="result-value">${opodatkowanaPow} m²</div></div>
         <div class="result-divider"></div>
-        <div class="result-item"><div class="result-label">Należność jednorazowa:</div><div class="result-value">${formatCurrency(jednorazowa)}</div></div>
-        <div class="result-item"><div class="result-label">Opłata roczna (10% przez 10 lat):</div><div class="result-value">${formatCurrency(oplataRoczna)}</div></div>
-        <div class="result-item"><div class="result-label">Razem całkowity koszt:</div><div class="result-value">${formatCurrency(lacznyKoszt)}</div></div>
+        <div class="result-item"><div class="result-label">Należność jednorazowa (przed pomniejszeniem):</div><div class="result-value">${formatCurrency(jednorazowa)}</div></div>
+        <div class="result-item"><div class="result-label">Opłata roczna (10% od pełnej należności):</div><div class="result-value">${formatCurrency(oplataRoczna)}</div></div>
+        <div class="result-item"><div class="result-label">Razem (szacunek przed pomniejszeniem):</div><div class="result-value">${formatCurrency(lacznyKoszt)}</div></div>
+        <div class="result-notice">
+          <img src="assets/icons/info-circle.svg" alt="" class="result-notice-icon" width="18" height="18" aria-hidden="true">
+          <p><strong>Ważne:</strong> Należność jednorazowa pomniejsza się o wartość gruntu ustaloną według cen rynkowych stosowanych w danej miejscowości w obrocie gruntami, w dniu faktycznego wyłączenia tego gruntu z produkcji. Dotyczy to wyłącznie opłaty jednorazowej - opłata roczna przez 10 lat naliczana jest od pełnej kwoty należności jednorazowej, bez tego pomniejszenia.</p>
+        </div>
       `;
     }
   </script>
   <footer class="site-footer">
     <p>&copy; <span class="js-current-year"></span> <a href="/">kalkulator-dzialki.pl</a></p>
+    <div class="related-calculators">
+      <p>Powiązane kalkulatory</p>
+      <ul>
+        <li><a href="kalkulator-wylaczenia-z-produkcji-lesnej.html">Kalkulator wyłączenia z produkcji leśnej</a></li>
+      </ul>
+    </div>
   </footer>
   <script>
     document.querySelectorAll('.js-current-year').forEach((element) => {

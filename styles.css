@@ -41,6 +41,15 @@ label {
   max-width: 36em;
 }
 
+.hero-subtitle {
+  margin: 10px 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 36em;
+}
+
 .home-hero {
   position: relative;
   margin-top: 6px;
@@ -56,6 +65,12 @@ label {
   box-shadow:
     0 4px 6px rgba(15, 30, 45, 0.06),
     0 16px 40px rgba(15, 30, 45, 0.18);
+}
+
+.home-hero--forest {
+  background-image:
+    linear-gradient(145deg, rgba(12, 28, 18, 0.88) 0%, rgba(25, 55, 38, 0.82) 50%, rgba(18, 45, 32, 0.78) 100%),
+    url("assets/img-forest.jpeg");
 }
 
 .home-hero::before {
@@ -207,6 +222,158 @@ input, select {
   border-radius: 4px;
 }
 
+.input-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.input-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.input-row select {
+  width: auto;
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  width: auto;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.radio-fieldset {
+  margin: 14px 0 0;
+  padding: 0;
+  border: none;
+}
+
+.radio-fieldset legend {
+  display: block;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.checkbox-row label {
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.field-hint {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+.result-highlight {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.result-highlight--success {
+  background: #ecfdf5;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #065f46;
+}
+
+.result-highlight--info {
+  background: #fffbeb;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #92400e;
+}
+
+.cross-link-box {
+  margin: 2.5rem 0 0;
+  padding: 18px 20px;
+  background: linear-gradient(145deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 12px;
+}
+
+.cross-link-box h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.15rem;
+  color: #1a1a1a;
+  line-height: 1.35;
+}
+
+.cross-link-box p {
+  margin: 0;
+  color: #374151;
+  line-height: 1.55;
+}
+
+.cross-link-box a {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.related-calculators {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ececec;
+  text-align: left;
+}
+
+.related-calculators p {
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.related-calculators ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-calculators li + li {
+  margin-top: 0.35rem;
+}
+
+.related-calculators a {
+  font-size: 0.88rem;
+  color: var(--accent-color);
+}
+
 button { 
   margin-top: 20px; 
   padding: 10px 20px; 
@@ -253,6 +420,31 @@ button:hover {
 .result-divider {
   margin: 4px 0 14px;
   border-top: 1px solid #f2f1f1;
+}
+
+.result-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: #f0f7fb;
+  border: 1px solid rgba(63, 111, 143, 0.2);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #374151;
+}
+
+.result-notice-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  opacity: 0.75;
+}
+
+.result-notice p {
+  margin: 0;
 }
 
 .calculator-section {

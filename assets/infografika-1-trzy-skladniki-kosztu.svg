@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 260" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<title>Trzy składniki kosztu odrolnienia działki</title>
+<desc>Infografika przedstawiająca trzy główne składniki kosztu odrolnienia: należność jednorazowa do 43,72 zł na metr kwadratowy, opłaty roczne 10 procent przez 10 lat, oraz koszty dodatkowe od 1500 do 4500 zł.</desc>
+
+<!-- Karta 1: Należność jednorazowa (teal) -->
+<rect x="20" y="20" width="200" height="220" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="36" y="52" font-size="14" font-weight="500" fill="#085041">Należność jednorazowa</text>
+<line x1="36" y1="66" x2="204" y2="66" stroke="#0F6E56" stroke-width="0.5" opacity="0.25"/>
+<text x="36" y="94" font-size="14" font-weight="500" fill="#085041">Do 43,72 zł/m²</text>
+<text x="36" y="128" font-size="12" font-weight="400" fill="#0F6E56">Stawka × powierzchnia</text>
+<text x="36" y="148" font-size="12" font-weight="400" fill="#0F6E56">Minus wartość rynkowa</text>
+<text x="36" y="168" font-size="12" font-weight="400" fill="#0F6E56">działki w lokalizacji</text>
+<text x="36" y="220" font-size="12" font-weight="400" fill="#0F6E56" opacity="0.7">Płatne 60 dni od decyzji</text>
+
+<!-- Karta 2: Opłaty roczne (purple) -->
+<rect x="240" y="20" width="200" height="220" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text x="256" y="52" font-size="14" font-weight="500" fill="#3C3489">Opłaty roczne</text>
+<line x1="256" y1="66" x2="424" y2="66" stroke="#534AB7" stroke-width="0.5" opacity="0.25"/>
+<text x="256" y="94" font-size="14" font-weight="500" fill="#3C3489">10% × 10 lat</text>
+<text x="256" y="128" font-size="12" font-weight="400" fill="#534AB7">Razem 100% pełnej</text>
+<text x="256" y="148" font-size="12" font-weight="400" fill="#534AB7">należności ustawowej,</text>
+<text x="256" y="168" font-size="12" font-weight="400" fill="#534AB7">bez pomniejszenia</text>
+<text x="256" y="220" font-size="12" font-weight="400" fill="#534AB7" opacity="0.7">Co rok do 30 czerwca</text>
+
+<!-- Karta 3: Koszty dodatkowe (gray) -->
+<rect x="460" y="20" width="200" height="220" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="476" y="52" font-size="14" font-weight="500" fill="#444441">Koszty dodatkowe</text>
+<line x1="476" y1="66" x2="644" y2="66" stroke="#5F5E5A" stroke-width="0.5" opacity="0.25"/>
+<text x="476" y="94" font-size="14" font-weight="500" fill="#444441">1 500 – 4 500 zł</text>
+<text x="476" y="128" font-size="12" font-weight="400" fill="#5F5E5A">Operat szacunkowy,</text>
+<text x="476" y="148" font-size="12" font-weight="400" fill="#5F5E5A">mapa do projektu,</text>
+<text x="476" y="168" font-size="12" font-weight="400" fill="#5F5E5A">wypisy i opłaty</text>
+<text x="476" y="220" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.7">W trakcie procedury</text>
+</svg>

@@ -785,7 +785,8 @@ button:hover {
   border-radius: 6px;
 }
 
-.content-sections table {
+.content-sections table,
+.article-body table {
   width: 100%;
   min-width: 520px;
   border-collapse: collapse;
@@ -793,22 +794,34 @@ button:hover {
 }
 
 .content-sections th,
-.content-sections td {
+.content-sections td,
+.article-body th,
+.article-body td {
   padding: 0.65rem 0.75rem;
   text-align: left;
   border-bottom: 1px solid #ececec;
   vertical-align: top;
 }
 
-.content-sections th {
+.content-sections th,
+.article-body th {
   background-color: #f8f9fa;
   font-weight: 600;
   color: #333;
   white-space: nowrap;
 }
 
-.content-sections tbody tr:last-child td {
+.content-sections tbody tr:last-child td,
+.article-body tbody tr:last-child td {
   border-bottom: none;
+}
+
+.article-body .table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0 1.25rem;
+  border: 1px solid #ececec;
+  border-radius: 6px;
 }
 
 .latest-article {

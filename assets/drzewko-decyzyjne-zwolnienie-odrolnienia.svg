@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 420" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<title>Drzewko decyzyjne: czy moja działka jest zwolniona z opłaty za odrolnienie</title>
+<desc>Trzy pytania prowadzące do określenia statusu opłaty: powierzchnia do 500 metrów kwadratowych pod dom jednorodzinny, klasa gleby IV-VI mineralna, inwestycja celu publicznego. Każda odpowiedź "tak" prowadzi do zwolnienia z opłaty 0 zł. Odpowiedź "nie" na wszystkie trzy pytania prowadzi do konieczności zapłaty według stawki ustawowej.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<!-- Q1 -->
+<rect x="60" y="30" width="280" height="70" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="200" y="60" text-anchor="middle" font-size="14" font-weight="500" fill="#444441">Powierzchnia ≤ 500 m²?</text>
+<text x="200" y="82" text-anchor="middle" font-size="12" font-weight="400" fill="#5F5E5A">Dom jednorodzinny</text>
+
+<!-- W1 -->
+<rect x="400" y="40" width="200" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="500" y="62" text-anchor="middle" font-size="14" font-weight="500" fill="#085041">0 zł</text>
+<text x="500" y="80" text-anchor="middle" font-size="12" font-weight="400" fill="#0F6E56">Pełne zwolnienie 500 m²</text>
+
+<!-- Arrows Q1 -->
+<line x1="340" y1="65" x2="390" y2="65" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="365" y="58" text-anchor="middle" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.7">Tak</text>
+<line x1="200" y1="100" x2="200" y2="120" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="215" y="116" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.7">Nie</text>
+
+<!-- Q2 -->
+<rect x="60" y="130" width="280" height="70" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="200" y="160" text-anchor="middle" font-size="14" font-weight="500" fill="#444441">Klasa gleby IV-VI?</text>
+<text x="200" y="182" text-anchor="middle" font-size="12" font-weight="400" fill="#5F5E5A">Pochodzenie mineralne</text>
+
+<!-- W2 -->
+<rect x="400" y="140" width="200" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="500" y="162" text-anchor="middle" font-size="14" font-weight="500" fill="#085041">0 zł</text>
+<text x="500" y="180" text-anchor="middle" font-size="12" font-weight="400" fill="#0F6E56">Zwolnienie ustawowe</text>
+
+<!-- Arrows Q2 -->
+<line x1="340" y1="165" x2="390" y2="165" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="365" y="158" text-anchor="middle" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.7">Tak</text>
+<line x1="200" y1="200" x2="200" y2="220" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="215" y="216" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.7">Nie</text>
+
+<!-- Q3 -->
+<rect x="60" y="230" width="280" height="70" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="200" y="260" text-anchor="middle" font-size="14" font-weight="500" fill="#444441">Cel publiczny?</text>
+<text x="200" y="282" text-anchor="middle" font-size="12" font-weight="400" fill="#5F5E5A">Drogi, koleje, sieci</text>
+
+<!-- W3 -->
+<rect x="400" y="240" width="200" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="500" y="262" text-anchor="middle" font-size="14" font-weight="500" fill="#085041">0 zł</text>
+<text x="500" y="280" text-anchor="middle" font-size="12" font-weight="400" fill="#0F6E56">Inwestycja publiczna</text>
+
+<!-- Arrows Q3 -->
+<line x1="340" y1="265" x2="390" y2="265" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="365" y="258" text-anchor="middle" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.7">Tak</text>
+<line x1="200" y1="300" x2="200" y2="320" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="215" y="316" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.7">Nie</text>
+
+<!-- Final -->
+<rect x="60" y="330" width="280" height="70" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text x="200" y="360" text-anchor="middle" font-size="14" font-weight="500" fill="#633806">Płacisz wg stawki ustawowej</text>
+<text x="200" y="382" text-anchor="middle" font-size="12" font-weight="400" fill="#854F0B">Możesz obniżyć przez wycenę</text>
+</svg>

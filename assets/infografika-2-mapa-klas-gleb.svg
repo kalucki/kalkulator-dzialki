@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 380" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<title>Mapa klas gleb i stawek odrolnienia 2026</title>
+<desc>Wszystkie klasy bonitacyjne gleb od I do VI ze stawkami za metr kwadratowy oraz wskazaniem zwolnienia z opłaty dla gleb mineralnych klas IV-VI.</desc>
+
+<!-- Sekcja 1: Klasy I-IIIb -->
+<text x="20" y="22" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.85">Klasy I-IIIb: wymagana zgoda Ministra Rolnictwa</text>
+
+<text x="20" y="47" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasa I</text>
+<rect x="160" y="40" width="330" height="14" rx="3" fill="#BA7517"/>
+<text x="660" y="47" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">43,72 zł/m²</text>
+
+<text x="20" y="79" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasa II</text>
+<rect x="160" y="72" width="286" height="14" rx="3" fill="#BA7517"/>
+<text x="660" y="79" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">37,89 zł/m²</text>
+
+<text x="20" y="111" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasa IIIa</text>
+<rect x="160" y="104" width="242" height="14" rx="3" fill="#BA7517"/>
+<text x="660" y="111" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">32,06 zł/m²</text>
+
+<text x="20" y="143" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasa IIIb</text>
+<rect x="160" y="136" width="198" height="14" rx="3" fill="#BA7517"/>
+<text x="660" y="143" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">26,23 zł/m²</text>
+
+<!-- Sekcja 2: Klasy IV-VI organiczne -->
+<text x="20" y="170" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.85">Klasy IV-VI: gleby organiczne</text>
+
+<text x="20" y="195" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasa IVa</text>
+<rect x="160" y="188" width="154" height="14" rx="3" fill="#BA7517"/>
+<text x="660" y="195" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">20,40 zł/m²</text>
+
+<text x="20" y="227" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasa IVb</text>
+<rect x="160" y="220" width="110" height="14" rx="3" fill="#BA7517"/>
+<text x="660" y="227" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">14,57 zł/m²</text>
+
+<text x="20" y="259" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasa V</text>
+<rect x="160" y="252" width="88" height="14" rx="3" fill="#BA7517"/>
+<text x="660" y="259" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">11,66 zł/m²</text>
+
+<text x="20" y="291" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasa VI</text>
+<rect x="160" y="284" width="66" height="14" rx="3" fill="#BA7517"/>
+<text x="660" y="291" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">8,74 zł/m²</text>
+
+<!-- Sekcja 3: Klasy IV-VI mineralne -->
+<text x="20" y="318" font-size="12" font-weight="400" fill="#5F5E5A" opacity="0.85">Klasy IV-VI: gleby mineralne</text>
+
+<text x="20" y="343" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">Klasy IV-VI</text>
+<rect x="160" y="332" width="330" height="22" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="325" y="343" text-anchor="middle" font-size="14" font-weight="500" fill="#085041" dominant-baseline="central">Zwolnienie z opłaty</text>
+<text x="660" y="343" text-anchor="end" font-size="14" font-weight="500" fill="#2C2C2A" dominant-baseline="central">0 zł</text>
+</svg>

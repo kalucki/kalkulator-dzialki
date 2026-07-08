@@ -88,9 +88,10 @@
   </script>
 </head>
 <body>
+  <div class="calculator-shell">
   <header class="home-hero">
     <div class="hero-inner">
-      <h1>Kalkulator <span class="hero-highlight">odrolnienia działki</span></h1>
+      <h1>Kalkulator <span class="hero-highlight">odrolnienia działki 2026</span></h1>
       <p class="hero-lead">Sprawdź koszt wyłączenia gruntu z produkcji rolnej w 30 sekund – uwzględnia klasę gleby, powierzchnię i zwolnienia ustawowe.</p>
       <ul class="hero-highlights" aria-label="Najważniejsze informacje">
         <li>
@@ -104,15 +105,12 @@
       </ul>
     </div>
   </header>
-  <div class="kalkulator-container">
 
-  <p class="calculator-switch">
-    <a href="kalkulator-wylaczenia-z-produkcji-lesnej.html" class="calculator-switch-link">
-      <img src="assets/icons/arrows-exchange.svg" alt="" class="icon icon--accent" width="18" height="18" aria-hidden="true">
-      Działka leśna? Przejdź do kalkulatora wyłączenia z produkcji leśnej
-      <img src="assets/icons/chevron-right.svg" alt="" class="calculator-switch-arrow" width="16" height="16" aria-hidden="true">
-    </a>
-  </p>
+  <div class="calculator-shell__body">
+    <nav class="calculator-mode-toggle" aria-label="Typ kalkulatora">
+      <a href="/" class="calculator-mode-toggle__option calculator-mode-toggle__option--active" aria-current="page">Odrolnienie</a>
+      <a href="kalkulator-wylaczenia-z-produkcji-lesnej.html" class="calculator-mode-toggle__option">Wyłączenie z produkcji leśnej</a>
+    </nav>
 
   <section id="kalkulator" class="calculator-section" aria-label="Kalkulator odrolnienia">
   <label for="area">Powierzchnia działki (m²):</label>
@@ -159,20 +157,13 @@
 
   <div class="result" id="result"></div>
   </section>
+  </div>
+  </div>
+
+  <div class="kalkulator-container">
 
   <nav class="page-toc" aria-label="Spis treści">
-    <div class="page-toc-header">
-      <img src="assets/icons/list-details.svg" alt="" class="icon icon--accent" width="22" height="22" aria-hidden="true">
-      <p class="page-toc-title">Na tej stronie</p>
-    </div>
     <ul class="page-toc-grid">
-      <li>
-        <a href="#kalkulator" class="page-toc-link">
-          <span class="page-toc-icon"><img src="assets/icons/calculator.svg" alt="" width="18" height="18" aria-hidden="true"></span>
-          <span class="page-toc-label">Kalkulator</span>
-          <img src="assets/icons/chevron-right.svg" alt="" class="page-toc-arrow" width="16" height="16" aria-hidden="true">
-        </a>
-      </li>
       <li>
         <a href="#koszt" class="page-toc-link">
           <span class="page-toc-icon"><img src="assets/icons/currency-zloty.svg" alt="" width="18" height="18" aria-hidden="true"></span>

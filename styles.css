@@ -30,45 +30,57 @@ label {
   margin-top: 10px; 
 }
 .kalkulator-container {
-  margin-top:4px;
+  margin-top: 24px;
 }
 
-.calculator-switch {
-  margin: 0 0 14px;
+.calculator-shell {
+  margin-top: 6px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px rgba(15, 30, 45, 0.06),
+    0 16px 40px rgba(15, 30, 45, 0.18);
 }
 
-.calculator-switch-link {
+.calculator-shell__body {
+  position: relative;
+  z-index: 1;
+  padding: 20px 20px 24px;
+  background: #fff;
+}
+
+.calculator-mode-toggle {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
+  gap: 4px;
+  padding: 4px;
+  margin: 0 0 16px;
   background: var(--surface-muted);
   border: 1px solid var(--border-color);
   border-radius: 10px;
+}
+
+.calculator-mode-toggle__option {
+  flex: 1;
+  padding: 10px 12px;
+  text-align: center;
   text-decoration: none;
-  color: #374151;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  line-height: 1.4;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+  line-height: 1.35;
+  color: #6b7280;
+  border-radius: 7px;
+  transition: background 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
 }
 
-.calculator-switch-link:hover {
-  border-color: rgba(63, 111, 143, 0.4);
-  box-shadow: 0 2px 8px rgba(63, 111, 143, 0.08);
+.calculator-mode-toggle__option--active {
+  background: #fff;
   color: var(--accent-color);
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(63, 111, 143, 0.12);
 }
 
-.calculator-switch-arrow {
-  margin-left: auto;
-  flex-shrink: 0;
-  opacity: 0.45;
-  transition: opacity 0.15s ease, transform 0.15s ease;
-}
-
-.calculator-switch-link:hover .calculator-switch-arrow {
-  opacity: 0.75;
-  transform: translateX(2px);
+.calculator-mode-toggle__option:not(.calculator-mode-toggle__option--active):hover {
+  color: #374151;
 }
 .hero-lead {
   margin: 12px 0 0;
@@ -90,23 +102,22 @@ label {
 
 .home-hero {
   position: relative;
-  margin-top: 6px;
-  margin-bottom: 18px;
+  margin: 0;
   padding: 0;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
   background-image:
+    linear-gradient(to bottom, transparent 0%, transparent 55%, rgba(255, 255, 255, 0.7) 82%, #ffffff 100%),
     linear-gradient(145deg, rgba(15, 30, 45, 0.88) 0%, rgba(45, 85, 110, 0.78) 55%, rgba(30, 70, 55, 0.72) 100%),
     url("assets/im6Medium.jpeg");
   background-size: cover;
   background-position: center;
-  box-shadow:
-    0 4px 6px rgba(15, 30, 45, 0.06),
-    0 16px 40px rgba(15, 30, 45, 0.18);
+  box-shadow: none;
 }
 
 .home-hero--forest {
   background-image:
+    linear-gradient(to bottom, transparent 0%, transparent 55%, rgba(255, 255, 255, 0.7) 82%, #ffffff 100%),
     linear-gradient(145deg, rgba(12, 28, 18, 0.88) 0%, rgba(25, 55, 38, 0.82) 50%, rgba(18, 45, 32, 0.78) 100%),
     url("assets/img-forest.jpeg");
 }
@@ -124,15 +135,7 @@ label {
 }
 
 .home-hero::after {
-  content: "";
-  position: absolute;
-  bottom: -30px;
-  left: 20%;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
-  pointer-events: none;
+  display: none;
 }
 
 .hero-inner {
@@ -488,13 +491,10 @@ button:hover {
 .calculator-section {
   scroll-margin-top: 1rem;
   padding: 22px 20px 24px;
-  background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%);
-  border: 1px solid rgba(63, 111, 143, 0.28);
-  border-top: 3px solid var(--accent-color);
-  border-radius: 14px;
-  box-shadow:
-    0 2px 8px rgba(63, 111, 143, 0.08),
-    0 12px 32px rgba(63, 111, 143, 0.12);
+  background: #f8fbfd;
+  border: 1px solid rgba(63, 111, 143, 0.18);
+  border-radius: 12px;
+  box-shadow: none;
 }
 
 .note { 
@@ -553,24 +553,6 @@ button:hover {
   border-top: 1px solid var(--border-color);
   border-radius: 0;
   box-shadow: none;
-}
-
-.page-toc-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-.page-toc-title {
-  margin: 0;
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #6b7280;
 }
 
 .page-toc-grid {

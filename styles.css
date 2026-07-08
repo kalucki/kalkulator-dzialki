@@ -107,7 +107,7 @@ label {
   border-radius: 0;
   overflow: hidden;
   background-image:
-    linear-gradient(to bottom, transparent 0%, transparent 55%, rgba(255, 255, 255, 0.7) 82%, #ffffff 100%),
+    linear-gradient(to bottom, transparent 0%, transparent 68%, rgba(255, 255, 255, 0.45) 88%, #ffffff 100%),
     linear-gradient(145deg, rgba(15, 30, 45, 0.88) 0%, rgba(45, 85, 110, 0.78) 55%, rgba(30, 70, 55, 0.72) 100%),
     url("assets/im6Medium.jpeg");
   background-size: cover;
@@ -117,7 +117,7 @@ label {
 
 .home-hero--forest {
   background-image:
-    linear-gradient(to bottom, transparent 0%, transparent 55%, rgba(255, 255, 255, 0.7) 82%, #ffffff 100%),
+    linear-gradient(to bottom, transparent 0%, transparent 68%, rgba(255, 255, 255, 0.45) 88%, #ffffff 100%),
     linear-gradient(145deg, rgba(12, 28, 18, 0.88) 0%, rgba(25, 55, 38, 0.82) 50%, rgba(18, 45, 32, 0.78) 100%),
     url("assets/img-forest.jpeg");
 }
